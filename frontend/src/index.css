@@ -1,0 +1,164 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   EduPortal LMS — Modern Global Stylesheet
+   Integrated with Bootstrap 5 & Plus Jakarta Sans typography
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --lms-primary: #4f46e5;
+  --lms-primary-dark: #3730a3;
+  --lms-navy: #0f172a;
+  --lms-navy-surface: #1e1b4b;
+  --lms-bg: #f8fafc;
+  --lms-card-bg: #ffffff;
+  --lms-border: #e2e8f0;
+  --lms-text: #1e293b;
+  --lms-text-muted: #64748b;
+  --lms-font: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--lms-font);
+  background-color: var(--lms-bg);
+  color: var(--lms-text);
+  font-size: 0.935rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Typography & Headings ─────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--lms-font);
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.03em !important;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em !important;
+}
+
+/* ── Card & Surface Utilities ──────────────────────────────────────────────── */
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.rounded-3 {
+  border-radius: 0.75rem !important;
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.08) !important;
+}
+
+.hover-shadow {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.hover-shadow-sm:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── Table Polishing ───────────────────────────────────────────────────────── */
+.table th {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--lms-text-muted);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 0.85rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ── Badges & Buttons ──────────────────────────────────────────────────────── */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 0.18s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Custom Scrollbars ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
